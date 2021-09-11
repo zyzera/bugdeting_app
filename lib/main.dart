@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:budget_app/home_page.dart';
+import 'package:budget_app/step_progress_indicator.dart';
 
 void main() {
   runApp(MyApp());
