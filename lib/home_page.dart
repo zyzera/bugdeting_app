@@ -2,6 +2,7 @@ import 'package:budget_app/screens/analytics.dart';
 import 'package:budget_app/screens/wallet.dart';
 import 'package:budget_app/screens/budget.dart';
 import 'package:flutter/material.dart';
+import 'package:budget_app/widgets/buttons.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -24,6 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      Navigator.of(context).maybePop();
     });
   }
 
@@ -31,8 +33,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: SafeArea(
+        child: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
@@ -40,14 +44,17 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.assessment_outlined),
             label: 'Analytics',
+            backgroundColor: Colors.orange,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.attach_money),
             label: 'Budget',
+            backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance_wallet_outlined),
             label: 'Wallet',
+            backgroundColor: Colors.green,
           ),
         ],
         currentIndex: _selectedIndex,
