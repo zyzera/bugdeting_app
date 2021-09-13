@@ -16,14 +16,15 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Budget App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        tabBarTheme: TabBarTheme(labelColor: Colors.black),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           elevation: 0,
           selectedIconTheme: IconThemeData(
-            size: 100,
+            size: 70,
             color: Color(0xffFFD700),
           ),
           unselectedIconTheme: IconThemeData(
-            size: 50,
+            size: 40,
             color: Colors.grey[500],
           ),
         ),

@@ -8,7 +8,7 @@ class AddButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 0, bottom: 15),
+      padding: const EdgeInsets.only(top: 0, left: 0, bottom: 2),
       child: Container(
         alignment: Alignment.bottomRight,
         child: FloatingActionButton.extended(
@@ -33,7 +33,7 @@ class RemoveButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 0, bottom: 15),
+      padding: const EdgeInsets.only(top: 0, left: 0, bottom: 2),
       child: Container(
         alignment: Alignment.bottomLeft,
         child: FloatingActionButton.extended(
@@ -53,6 +53,37 @@ class RemoveButton extends StatelessWidget {
 
 class ExpenseButton extends StatelessWidget {
   const ExpenseButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: null,
+    );
+  }
+}
+
+class MonthlyButton extends StatelessWidget {
+  const MonthlyButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: null,
+    );
+  }
+}
+
+class WeeklyButton extends StatelessWidget {
+  const WeeklyButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class DailyButton extends StatelessWidget {
+  const DailyButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
